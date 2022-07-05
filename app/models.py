@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import List
+from typing import List, Optional
 from pydantic import BaseModel
 
 
@@ -16,6 +16,7 @@ class Post(BaseModel):
     title: str
     content: str
     published: bool = True
+    ratings: Optional[int] = None
 
 
 class User(BaseModel):
